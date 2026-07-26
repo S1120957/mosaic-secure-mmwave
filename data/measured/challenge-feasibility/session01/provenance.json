@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "MEASURED_SESSION_20260726_01",
+  "artifact_provenance": "measured",
+  "capture_timestamp_utc": "2026-07-26T04:59:40Z",
+  "hardware": {
+    "sensor_model": "TI IWR6843ISK-ODS",
+    "sensor_silicon_revision": null,
+    "capture_board": "TI DCA1000EVM",
+    "dca1000_fpga_version": "2.8",
+    "radar_firmware_version": null
+  },
+  "software": {
+    "capture_application": null,
+    "capture_application_version": null,
+    "mmwave_sdk_version": null,
+    "operating_system": "Windows",
+    "repository": "https://github.com/S1120957/mosaic-secure-mmwave",
+    "git_commit": null
+  },
+  "configuration": {
+    "config_file": "profile_P0_P1_advframe.cfg",
+    "execution_mode": "advanced_frame",
+    "profiles": {
+      "P0": {"profile_id": 0, "start_frequency_ghz": 60.0, "slope_mhz_per_us": 57.14, "num_adc_samples": 256, "sampling_rate_ksps": 5209},
+      "P1": {"profile_id": 1, "start_frequency_ghz": 60.1, "slope_mhz_per_us": 57.14, "num_adc_samples": 256, "sampling_rate_ksps": 5209}
+    }
+  },
+  "capture_accounting": {
+    "subframes_total": 2000,
+    "subframes_p0": 1000,
+    "subframes_p1": 1000,
+    "bytes_per_subframe": 65536,
+    "expected_bytes": 131072000,
+    "received_bytes": 131072000,
+    "packet_loss": 0,
+    "continuous_lvds_stream": true
+  },
+  "artifacts": {
+    "target_binary": {"filename": "profile_switch_target_full.bin", "size_bytes": 131072000, "sha256": "3b303cb7f4fd339c70abfb44cf493c329de567051481f21ba208731e4ad739fc"},
+    "background_binary": {"filename": "profile_switch_bg_full.bin", "size_bytes": 131072000, "sha256": "5893803c417d7896e0002a3bd0b90248ef08120bee6aacb4313abc32103de5b1"},
+    "runtime_log": "runtime_control_capture.log",
+    "timestamps": "per_subframe_timestamps.json"
+  },
+  "integrity": {
+    "hash_algorithm": "SHA-256",
+    "all_required_hashes_present": true,
+    "verified_against_uploaded_files": true
+  },
+  "paper_eligibility": {
+    "eligible_for_measured_feasibility_results": true,
+    "eligible_for_measured_sensing_cost_results": true,
+    "eligible_for_measured_range_error_results": false,
+    "reason": "Range-error eligibility requires completed independent ground-truth geometry."
+  },
+  "operator": null,
+  "institution": null,
+  "notes": null
+}

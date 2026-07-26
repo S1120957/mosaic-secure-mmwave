@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "MEASURED_SESSION_20260726_01",
+  "provenance": "measured",
+  "capture_role": "one_anchor_challenge_feasibility",
+  "scene": {
+    "description": null,
+    "environment": "indoor",
+    "geometry_fixed_during_capture": true
+  },
+  "anchor": {
+    "anchor_id": "anchor_01",
+    "sensor_model": "TI IWR6843ISK-ODS",
+    "capture_board": "TI DCA1000EVM",
+    "pose_reference_frame": null,
+    "position_m": {"x": 0.0, "y": 0.0, "z": null},
+    "orientation_deg": {"yaw": 0.0, "pitch": null, "roll": null}
+  },
+  "target": {
+    "target_id": "target_01",
+    "target_type": null,
+    "range_m": null,
+    "range_uncertainty_m": null,
+    "bearing_deg": null,
+    "bearing_uncertainty_deg": null,
+    "radial_velocity_mps": 0.0,
+    "velocity_uncertainty_mps": null,
+    "measurement_method": null,
+    "measurement_device": null,
+    "measurement_timestamp_utc": null
+  },
+  "capture_conditions": {
+    "profiles": ["P0", "P1"],
+    "profile_sequence": "alternating",
+    "subframes_total": 2000,
+    "subframes_per_profile": 1000,
+    "background_capture_available": true,
+    "target_capture_available": true
+  },
+  "eligibility": {
+    "independent_ground_truth": false,
+    "eligible_for_range_error_results": false,
+    "eligible_for_sensing_cost_results": true,
+    "reason": "Independent target geometry and measurement method still need to be entered."
+  }
+}
