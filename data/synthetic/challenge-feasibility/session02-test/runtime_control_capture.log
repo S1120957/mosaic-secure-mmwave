@@ -1,0 +1,11 @@
+SYNTHETIC TEST DATA — NOT A PHYSICAL DCA1000 CAPTURE
+Generated UTC: 2026-07-26T18:29:59.471778+00:00
+Subframes: 2000
+P0 count: 1000
+P1 count: 1000
+Bytes per subframe: 65536
+Bytes per binary: 131072000
+Target SHA-256: af299543af4f87f2e59fcdb4d578e4a001decfe7850b1dea6e92af862eb36b2f
+Background SHA-256: c91e4a52c200d8e57bd13d7bc7c8f2330c5f46cc23017492ffe27a6e8e60af6d
+Hardware provenance: NONE
+Publication eligibility: FALSE

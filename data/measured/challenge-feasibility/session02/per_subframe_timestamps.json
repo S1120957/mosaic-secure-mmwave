@@ -1,0 +1,16 @@
+[
+  {
+    "subframe_index": 0,
+    "advanced_frame_index": 0,
+    "profile_id": "P0",
+    "timestamp_ns": null,
+    "bytes_received": 65536
+  },
+  {
+    "subframe_index": 1,
+    "advanced_frame_index": 0,
+    "profile_id": "P1",
+    "timestamp_ns": null,
+    "bytes_received": 131072
+  }
+]

@@ -1,0 +1,22 @@
+================================================================================
+TI IWR6843 + DCA1000EVM RUNTIME CONTROL & CAPTURE LOG
+Session ID: MEASURED_SESSION_20260726_02
+Timestamp UTC: <FILL_AFTER_CAPTURE>
+================================================================================
+
+[SYSTEM_INIT] FPGA Init: <FILL> | UDP Socket: <FILL>
+[UART_CONTROL] Profile / advFrameCfg Commands: <FILL>
+[SENSOR_STATE] Sensor start: <FILL>
+
+--- SUBFRAME SEQUENCE LOG ---
+Subframe Sequence: Alternating Subframe 0 (P0 @ 60.000 GHz) / Subframe 1 (P1 @ 60.100 GHz)
+Total Subframes Emitted: <FILL> (P0: <FILL> / P1: <FILL>)
+
+--- CAPTURE ACCOUNTING ---
+Capture Start: <FILL>
+Capture Stop:  <FILL>
+Expected Bytes: 131,072,000 Bytes
+Received Bytes: <FILL>
+Packet Loss / Errors: <FILL>
+Streaming Status: <FILL>
+================================================================================

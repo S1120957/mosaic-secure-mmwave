@@ -18,3 +18,6 @@ data/recorded/
 artifacts/calibration/*.json
 artifacts/calibration/*.sha256
 artifacts/runs/*.tmp
+
+# Generated synthetic radar binaries
+data/synthetic/challenge-feasibility/session02-test/*.bin
