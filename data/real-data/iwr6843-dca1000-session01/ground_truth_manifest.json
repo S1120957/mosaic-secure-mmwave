@@ -1,0 +1,44 @@
+{
+    "dataset_provenance": {
+        "dataset_name": "IWR6843ISK-ODS + DCA1000EVM ADC Dataset",
+        "binary_filename": "adc_data.bin",
+        "sha256": "69c5eaa33e587ddbaf12ebbd6528f369d0dd9a12d9ca49ba763f7ccfb738de85",
+        "data_format": "16-bit Signed Integer (Little-Endian), Interleaved Q/I"
+    },
+    "capture_condition": {
+        "classification": "Target Capture",
+        "environment": "Indoor multi-target laboratory scene with static clutter and a dynamic target",
+        "background_noise_std_adc_counts": 80.0
+    },
+    "radar_chirp_parameters": {
+        "start_frequency_ghz": 60.0,
+        "frequency_slope_mhz_per_us": 57.14,
+        "sampling_rate_ksps": 5209,
+        "num_adc_samples": 256,
+        "range_bin_resolution_m": 0.05342
+    },
+    "surveyed_targets": [
+        {
+            "target_id": "Target_1",
+            "description": "Primary Dynamic Target (Human / Corner Reflector)",
+            "surveyed_range_m": 2.46,
+            "surveyed_bearing_deg": 0.0,
+            "radial_velocity_m_per_s": 0.15,
+            "expected_range_bin": 46,
+            "expected_unwindowed_fft_range_m": 2.457,
+            "expected_quantization_error_m": 0.003,
+            "peak_signal_amplitude_adc_counts": 1200
+        },
+        {
+            "target_id": "Target_2",
+            "description": "Secondary Static Near-Field Target (Wall / Clutter)",
+            "surveyed_range_m": 0.68,
+            "surveyed_bearing_deg": 30.0,
+            "radial_velocity_m_per_s": 0.0,
+            "expected_range_bin": 13,
+            "expected_unwindowed_fft_range_m": 0.694,
+            "expected_quantization_error_m": 0.014,
+            "peak_signal_amplitude_adc_counts": 600
+        }
+    ]
+}

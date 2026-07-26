@@ -62,7 +62,9 @@ def import_dca1000_recording(
         adc_bits=int(rf["adc_bits"]),
         complex_samples=str(rf["adc_format"]).lower() == "complex",
         iq_order=str(rf["iq_order"]),
+        sample_order=str(rf.get("sample_order", "chirp_sample_rx")),
         lane_interleave=bool(rf["lane_interleave"]),
+        scale_to_unit=bool(rf.get("scale_to_unit", True)),
     )
     reader = DCA1000BinaryReader(source_bin, raw_config)
     frame_count = reader.frame_count()

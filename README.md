@@ -136,3 +136,8 @@ Mock captures are ineligible for paper results.
 ## Phase-C hotfix
 
 Complex DCA1000 IQ samples are preserved as `complex64`; mock imports are explicitly marked synthetic.
+
+
+## Physical IWR6843/DCA1000 reviewer dataset
+
+The repository includes a paired target/background physical ADC capture, immutable SHA-256 provenance, a Python verification pipeline, and an independent C++17 validator. Start with `ARTIFACT_EVALUATION.md`.

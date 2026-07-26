@@ -23,6 +23,7 @@ class TIRawCaptureConfig(BaseModel):
     adc_bits: int = Field(default=16)
     complex_samples: bool = True
     iq_order: str = "IQ"
+    sample_order: str = "chirp_sample_rx"
     lane_interleave: bool = False
     scale_to_unit: bool = True
 
@@ -109,12 +110,25 @@ class DCA1000BinaryReader:
         if cfg.scale_to_unit:
             complex_values = complex_values / 32768.0
 
-        # Common logical shape: [chirp/slow-time, ADC/fast-time, RX].
-        return complex_values.reshape(
-            cfg.chirps_per_frame,
-            cfg.adc_samples,
-            cfg.rx_channels,
-        ).astype(np.complex64)
+        if cfg.sample_order == "chirp_sample_rx":
+            samples = complex_values.reshape(
+                cfg.chirps_per_frame,
+                cfg.adc_samples,
+                cfg.rx_channels,
+            )
+        elif cfg.sample_order == "chirp_rx_sample":
+            samples = complex_values.reshape(
+                cfg.chirps_per_frame,
+                cfg.rx_channels,
+                cfg.adc_samples,
+            ).transpose(0, 2, 1)
+        else:
+            raise ValueError(
+                "sample_order must be chirp_sample_rx or chirp_rx_sample"
+            )
+
+        # Canonical logical shape: [chirp/slow-time, ADC/fast-time, RX].
+        return samples.astype(np.complex64)
 
 
 def estimate_ti_observation(

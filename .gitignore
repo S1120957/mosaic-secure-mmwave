@@ -17,3 +17,4 @@ data/recorded/
 
 artifacts/calibration/*.json
 artifacts/calibration/*.sha256
+artifacts/runs/*.tmp
