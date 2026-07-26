@@ -1,0 +1,84 @@
+{
+  "report_type": "profile_repeatability_summary",
+  "source_report": "results/challenge-feasibility/profile_stratified_raw_signal.json",
+  "publication_eligibility": false,
+  "limitations": [
+    "Session 03 lacks a distinct matching timestamp artifact.",
+    "The analysis treats even subframes as P0 and odd subframes as P1.",
+    "Metrics are computed on raw little-endian int16 samples.",
+    "No physical range, Doppler, angle, or waveform claim is made."
+  ],
+  "metrics": {
+    "rms": {
+      "P0_even_subframes": {
+        "session02_target_minus_background": 858.8823163484376,
+        "session03_target_minus_background": 858.8418999165397,
+        "cross_session_delta_drift_percent": 0.004705811505157665,
+        "session02_target_to_background_ratio": 1.1286908788562506,
+        "session03_target_to_background_ratio": 1.1286840824346172,
+        "cross_session_ratio_drift_percent": 0.000602152655188041
+      },
+      "P1_odd_subframes": {
+        "session02_target_minus_background": 858.773113817796,
+        "session03_target_minus_background": 858.7654018923158,
+        "cross_session_delta_drift_percent": 0.0008980206743126916,
+        "session02_target_to_background_ratio": 1.1286745956487347,
+        "session03_target_to_background_ratio": 1.128673033293085,
+        "cross_session_ratio_drift_percent": 0.00013842401849951434
+      },
+      "profile_balance": {
+        "session02_P0_vs_P1_drift_percent": 0.012715301185992548,
+        "session03_P0_vs_P1_drift_percent": 0.008907510365527208
+      }
+    },
+    "mean_abs": {
+      "P0_even_subframes": {
+        "session02_target_minus_background": 462.80743438720674,
+        "session03_target_minus_background": 462.7796092834469,
+        "cross_session_delta_drift_percent": 0.006012422915834306,
+        "session02_target_to_background_ratio": 1.0796731785783709,
+        "session03_target_to_background_ratio": 1.0796683449080413,
+        "cross_session_ratio_drift_percent": 0.0004476985485600445
+      },
+      "P1_odd_subframes": {
+        "session02_target_minus_background": 462.7588119201655,
+        "session03_target_minus_background": 462.7053785705566,
+        "cross_session_delta_drift_percent": 0.011547361887781321,
+        "session02_target_to_background_ratio": 1.0796653096145594,
+        "session03_target_to_background_ratio": 1.0796552715350975,
+        "cross_session_ratio_drift_percent": 0.0009297442491403554
+      },
+      "profile_balance": {
+        "session02_P0_vs_P1_drift_percent": 0.010506534186013109,
+        "session03_P0_vs_P1_drift_percent": 0.01604147314424556
+      }
+    },
+    "peak_abs": {
+      "P0_even_subframes": {
+        "session02_target_minus_background": 5453.937000000002,
+        "session03_target_minus_background": 5460.1810000000005,
+        "cross_session_delta_drift_percent": 0.11442060641086665,
+        "session02_target_to_background_ratio": 1.3850873450180285,
+        "session03_target_to_background_ratio": 1.3855156135708295,
+        "cross_session_ratio_drift_percent": 0.030915187719218324
+      },
+      "P1_odd_subframes": {
+        "session02_target_minus_background": 5455.520999999999,
+        "session03_target_minus_background": 5457.188000000002,
+        "cross_session_delta_drift_percent": 0.030551533995877643,
+        "session02_target_to_background_ratio": 1.385138762727691,
+        "session03_target_to_background_ratio": 1.3852061646674567,
+        "cross_session_ratio_drift_percent": 0.004865960126424236
+      },
+      "profile_balance": {
+        "session02_P0_vs_P1_drift_percent": 0.029039022836828448,
+        "session03_P0_vs_P1_drift_percent": 0.05483006024617421
+      }
+    }
+  },
+  "repeatability_check": {
+    "threshold_percent": 1.0,
+    "all_selected_metrics_within_threshold": true,
+    "status": "PASS"
+  }
+}
