@@ -1,5 +1,0 @@
-cmake_minimum_required(VERSION 3.16)
-project(mosaic_real_data_validator LANGUAGES CXX)
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-add_executable(validate_real_data validate_real_data.cpp)
