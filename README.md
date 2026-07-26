@@ -101,3 +101,38 @@ python scripts/replay_frozen.py \
 ```
 
 Synthetic artifacts are marked ineligible for paper performance claims.
+
+
+## Phase C: TI physical anchor path
+
+Reference hardware:
+
+- TI IWR6843ISK-ODS
+- TI DCA1000EVM
+- Windows host running TI acquisition tools
+
+Test the parser before hardware acquisition:
+
+```powershell
+python scripts\create_mock_dca1000_capture.py `
+  --profile configs\ti_iwr6843isk_ods_single_anchor.yaml `
+  --output data\raw\mock-ti\adc_data.bin `
+  --frames 12
+
+$env:MOSAIC_A1_KEY_HEX = python -c "import secrets; print(secrets.token_hex(32))"
+
+python scripts\import_ti_dca1000.py `
+  --profile configs\ti_iwr6843isk_ods_single_anchor.yaml `
+  --source-bin data\raw\mock-ti\adc_data.bin `
+  --output data\recorded\mock-ti-a1 `
+  --anchor-key-hex $env:MOSAIC_A1_KEY_HEX
+
+mosaic validate-recording data\recorded\mock-ti-a1
+```
+
+Mock captures are ineligible for paper results.
+
+
+## Phase-C hotfix
+
+Complex DCA1000 IQ samples are preserved as `complex64`; mock imports are explicitly marked synthetic.

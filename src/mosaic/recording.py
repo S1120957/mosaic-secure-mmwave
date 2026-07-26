@@ -103,7 +103,12 @@ class RecordingWriter:
         sample_path = self.samples_dir / f"{frame_id}.npy"
         if sample_path.exists():
             raise FileExistsError(f"Duplicate frame_id: {frame_id}")
-        np.save(sample_path, np.asarray(samples, dtype=np.float32), allow_pickle=False)
+        array = np.asarray(samples)
+        if np.iscomplexobj(array):
+            array = array.astype(np.complex64, copy=False)
+        else:
+            array = array.astype(np.float32, copy=False)
+        np.save(sample_path, array, allow_pickle=False)
         item = RecordedFrameIndex(
             frame_id=frame_id,
             anchor_id=anchor_id,

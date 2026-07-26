@@ -1,0 +1,56 @@
+hardware:
+  vendor: Texas Instruments
+  radar_model: IWR6843ISK-ODS
+  capture_card: DCA1000EVM
+  anchor_id: A1
+  serial_number: REPLACE_ME
+  firmware_version: REPLACE_ME
+  mmwave_studio_version: REPLACE_ME
+  mmwave_sdk_version: REPLACE_ME
+
+rf_profile:
+  start_frequency_ghz: 60.25
+  idle_time_us: 100.0
+  adc_start_time_us: 6.0
+  ramp_end_time_us: 60.0
+  frequency_slope_mhz_per_us: 60.0
+  adc_samples: 256
+  adc_sample_rate_ksps: 5000
+  rx_gain_db: 30
+  tx_mask: 1
+  rx_mask: 15
+  chirps_per_frame: 64
+  frame_periodicity_ms: 100.0
+  adc_bits: 16
+  adc_format: complex
+  lvds_lanes: 2
+  iq_order: IQ
+  lane_interleave: false
+
+challenge:
+  mode: profile_rotation
+  profile_ids: [0, 1, 2]
+  start_frequency_offsets_mhz: [-20.0, 0.0, 20.0]
+  slope_offsets_mhz_per_us: [-2.0, 0.0, 2.0]
+  chirp_permutations:
+    - [0, 1, 2, 3]
+    - [2, 0, 3, 1]
+    - [3, 2, 1, 0]
+  note: >
+    This is a proposed codebook. Confirm the exact per-frame reconfiguration
+    path and timing using the selected TI firmware and mmWave Studio/SDK before
+    treating it as implemented.
+
+capture:
+  expected_frames: 100
+  output_recording: data/recorded/ti-a1-benign
+  source_bin: data/raw/ti-a1-benign/adc_data.bin
+  timestamp_source: host_monotonic
+  sample_rate_hz: 5000000
+  channels: 4
+
+ground_truth:
+  method: static_survey
+  target_position_m: [2.0, 0.0]
+  target_velocity_mps: [0.0, 0.0]
+  uncertainty_m: 0.02
