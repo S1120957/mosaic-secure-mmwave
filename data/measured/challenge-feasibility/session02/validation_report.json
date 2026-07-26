@@ -1,0 +1,52 @@
+{
+  "report_type": "machine_derived_structural_validation",
+  "generated_utc": "2026-07-26T19:41:31.262506+00:00",
+  "session_id": "session02",
+  "git_commit": "f228157a2c905545956e6b9f9de3d1830f9e626b",
+  "publication_eligibility": false,
+  "publication_eligibility_reason": "Ground-truth, runtime-control, and acquisition-provenance metadata remain incomplete.",
+  "files": {
+    "target": {
+      "path": "data/measured/challenge-feasibility/session02/profile_switch_target_full.bin",
+      "size_bytes": 131072000,
+      "expected_size_bytes": 131072000,
+      "sha256": "5cb232274ab27aafac4b3b348a61310cacbb30babd19b672d32aa3a95ea8d534"
+    },
+    "background": {
+      "path": "data/measured/challenge-feasibility/session02/profile_switch_bg_full.bin",
+      "size_bytes": 131072000,
+      "expected_size_bytes": 131072000,
+      "sha256": "037a9d8cf302b5f1a9c65901c5fdea6a49cd8201106f3e48049682873c293824"
+    },
+    "timestamps": {
+      "path": "data/measured/challenge-feasibility/session02/per_subframe_timestamps.json",
+      "records": 2000,
+      "expected_records": 2000
+    }
+  },
+  "structural_checks": {
+    "target_size_valid": true,
+    "background_size_valid": true,
+    "record_count_valid": true,
+    "profile_sequence_valid": true,
+    "subframe_indices_valid": true,
+    "advanced_frame_indices_valid": true,
+    "byte_accounting_valid": true,
+    "timestamps_present": true,
+    "timestamps_monotonic": true
+  },
+  "timestamp_statistics": {
+    "first_timestamp_ns": 1785002099999999788,
+    "last_timestamp_ns": 1785002133316665544,
+    "capture_span_seconds": 33.316665756,
+    "mean_interval_ms": 16.666666211105554,
+    "minimum_interval_ms": 16.666125,
+    "maximum_interval_ms": 16.667389
+  },
+  "validation_status": {
+    "structural_validation": "PASS",
+    "ground_truth_review": "PENDING",
+    "runtime_control_review": "PENDING",
+    "acquisition_provenance_review": "PENDING"
+  }
+}

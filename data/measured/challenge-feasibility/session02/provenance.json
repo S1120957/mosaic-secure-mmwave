@@ -1,73 +1,73 @@
 {
-  "schema_version": "1.0",
-  "experiment_id": "MEASURED_SESSION_20260726_02",
-  "artifact_provenance": "measured",
-  "capture_timestamp_utc": null,
-  "hardware": {
-    "sensor_model": "TI IWR6843ISK-ODS",
-    "capture_board": "TI DCA1000EVM",
-    "dca1000_fpga_version": "2.8",
-    "radar_firmware_version": null
-  },
-  "software": {
-    "capture_application": null,
-    "capture_application_version": null,
-    "mmwave_sdk_version": null,
-    "operating_system": "Windows",
-    "repository": "https://github.com/S1120957/mosaic-secure-mmwave",
-    "git_commit": null
-  },
-  "configuration": {
-    "config_file": "profile_P0_P1_advframe.cfg",
-    "execution_mode": "advanced_frame",
-    "profiles": {
-      "P0": {
-        "profile_id": 0,
-        "start_frequency_ghz": 60.0,
-        "slope_mhz_per_us": 57.14,
-        "num_adc_samples": 256,
-        "sampling_rate_ksps": 5209
-      },
-      "P1": {
-        "profile_id": 1,
-        "start_frequency_ghz": 60.1,
-        "slope_mhz_per_us": 57.14,
-        "num_adc_samples": 256,
-        "sampling_rate_ksps": 5209
-      }
-    }
-  },
-  "capture_accounting": {
-    "subframes_total": 2000,
-    "subframes_p0": 1000,
-    "subframes_p1": 1000,
-    "bytes_per_subframe": 65536,
-    "expected_bytes": 131072000,
-    "received_bytes": 131072000,
-    "packet_loss": 0,
-    "continuous_lvds_stream": true
-  },
-  "artifacts": {
-    "target_binary": {
-      "filename": "profile_switch_target_full.bin",
-      "size_bytes": 131072000,
-      "sha256": "5cb232274ab27aafac4b3b348a61310cacbb30babd19b672d32aa3a95ea8d534"
-    },
-    "background_binary": {
-      "filename": "profile_switch_bg_full.bin",
-      "size_bytes": 131072000,
-      "sha256": "037a9d8cf302b5f1a9c65901c5fdea6a49cd8201106f3e48049682873c293824"
-    },
-    "runtime_log": "runtime_control_capture.log",
-    "timestamps": "per_subframe_timestamps.json"
-  },
-  "paper_eligibility": {
-    "eligible_for_measured_feasibility_results": false,
-    "eligible_for_measured_sensing_cost_results": false,
-    "eligible_for_measured_range_error_results": false,
-    "reason": "Promotion requires successful validation after physical capture."
-  },
-  "operator": null,
-  "institution": null,
-  "notes": null
+    "schema_version":  "1.0",
+    "experiment_id":  "MEASURED_SESSION_20260726_02",
+    "artifact_provenance":  "measured",
+    "capture_timestamp_utc":  "2026-07-25T17:55:00Z",
+    "hardware":  {
+                     "sensor_model":  "TI IWR6843ISK-ODS",
+                     "capture_board":  "TI DCA1000EVM",
+                     "dca1000_fpga_version":  "2.8",
+                     "radar_firmware_version": "not_recorded"
+                 },
+    "software":  {
+                     "capture_application": "not_recorded",
+                     "capture_application_version": "not_recorded",
+                     "mmwave_sdk_version": "not_recorded",
+                     "operating_system":  "Windows",
+                     "repository":  "https://github.com/S1120957/mosaic-secure-mmwave",
+                     "git_commit":  "f228157a2c905545956e6b9f9de3d1830f9e626b"
+                 },
+    "configuration":  {
+                          "config_file":  "profile_P0_P1_advframe.cfg",
+                          "execution_mode":  "advanced_frame",
+                          "profiles":  {
+                                           "P0":  {
+                                                      "profile_id":  0,
+                                                      "start_frequency_ghz":  60.0,
+                                                      "slope_mhz_per_us":  57.14,
+                                                      "num_adc_samples":  256,
+                                                      "sampling_rate_ksps":  5209
+                                                  },
+                                           "P1":  {
+                                                      "profile_id":  1,
+                                                      "start_frequency_ghz":  60.1,
+                                                      "slope_mhz_per_us":  57.14,
+                                                      "num_adc_samples":  256,
+                                                      "sampling_rate_ksps":  5209
+                                                  }
+                                       }
+                      },
+    "capture_accounting":  {
+                               "subframes_total":  2000,
+                               "subframes_p0":  1000,
+                               "subframes_p1":  1000,
+                               "bytes_per_subframe":  65536,
+                               "expected_bytes":  131072000,
+                               "received_bytes":  131072000,
+                               "packet_loss":  0,
+                               "continuous_lvds_stream":  true
+                           },
+    "artifacts":  {
+                      "target_binary":  {
+                                            "filename":  "profile_switch_target_full.bin",
+                                            "size_bytes":  131072000,
+                                            "sha256":  "5cb232274ab27aafac4b3b348a61310cacbb30babd19b672d32aa3a95ea8d534"
+                                        },
+                      "background_binary":  {
+                                                "filename":  "profile_switch_bg_full.bin",
+                                                "size_bytes":  131072000,
+                                                "sha256":  "037a9d8cf302b5f1a9c65901c5fdea6a49cd8201106f3e48049682873c293824"
+                                            },
+                      "runtime_log":  "runtime_control_capture.log",
+                      "timestamps":  "per_subframe_timestamps.json"
+                  },
+    "paper_eligibility":  {
+                              "eligible_for_measured_feasibility_results":  false,
+                              "eligible_for_measured_sensing_cost_results":  false,
+                              "eligible_for_measured_range_error_results":  false,
+                              "reason":  "Promotion requires successful validation after physical capture."
+                          },
+    "operator": "not_recorded",
+    "institution": "not_recorded",
+    "notes":  "Structural validation passed for binary sizes, hashes, 2000 timestamp records, P0/P1 alternation, monotonic timestamps, and byte accounting. Capture start and stop were derived from retained per-subframe timestamps. Packet-loss status and runtime command acknowledgements were not independently retained. Ground-truth geometry and several software-version fields remain unresolved."
 }

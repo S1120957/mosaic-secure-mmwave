@@ -1,22 +1,22 @@
 ================================================================================
 TI IWR6843 + DCA1000EVM RUNTIME CONTROL & CAPTURE LOG
-Session ID: MEASURED_SESSION_20260726_02
-Timestamp UTC: <FILL_AFTER_CAPTURE>
+Session ID: MEASURED_SESSION_20260725_02
+Timestamp UTC: 2026-07-25T17:55:00Z
 ================================================================================
 
-[SYSTEM_INIT] FPGA Init: <FILL> | UDP Socket: <FILL>
-[UART_CONTROL] Profile / advFrameCfg Commands: <FILL>
-[SENSOR_STATE] Sensor start: <FILL>
+[SYSTEM_INIT] FPGA Init: UNKNOWN | UDP Socket: UNKNOWN
+[UART_CONTROL] Profile / advFrameCfg Commands: configuration file preserved; command acknowledgements unavailable
+[SENSOR_STATE] Sensor start: inferred from first recorded subframe timestamp
 
 --- SUBFRAME SEQUENCE LOG ---
 Subframe Sequence: Alternating Subframe 0 (P0 @ 60.000 GHz) / Subframe 1 (P1 @ 60.100 GHz)
-Total Subframes Emitted: <FILL> (P0: <FILL> / P1: <FILL>)
+Total Subframes Emitted: 2000 (P0: 1000 / P1: 1000)
 
 --- CAPTURE ACCOUNTING ---
-Capture Start: <FILL>
-Capture Stop:  <FILL>
-Expected Bytes: 131,072,000 Bytes
-Received Bytes: <FILL>
-Packet Loss / Errors: <FILL>
-Streaming Status: <FILL>
+Capture Start: 2026-07-25T17:55:00Z
+Capture Stop:  2026-07-25T17:55:33.316666Z
+Expected Bytes: 131072000
+Received Bytes: 131072000
+Packet Loss / Errors: not independently available from retained runtime artifacts
+Streaming Status: structurally complete according to timestamp sequence and byte accounting
 ================================================================================
