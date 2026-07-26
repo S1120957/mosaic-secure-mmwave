@@ -1,0 +1,428 @@
+{
+  "report_type": "profile_stratified_raw_signal_analysis",
+  "publication_eligibility": false,
+  "limitations": [
+    "Session 03 lacks a distinct matching timestamp artifact.",
+    "The analysis treats even subframes as P0 and odd subframes as P1.",
+    "Metrics are computed on raw little-endian int16 samples.",
+    "No physical range, Doppler, angle, or waveform claim is made."
+  ],
+  "sessions": {
+    "session02": {
+      "session_id": "session02",
+      "target_sha256": "5cb232274ab27aafac4b3b348a61310cacbb30babd19b672d32aa3a95ea8d534",
+      "background_sha256": "037a9d8cf302b5f1a9c65901c5fdea6a49cd8201106f3e48049682873c293824",
+      "analysis_scope": "Raw int16 profile-stratified statistics only; this does not decode physical range, Doppler, angle, or challenge identity.",
+      "profiles": {
+        "P0_even_subframes": {
+          "subframes": 1000,
+          "metrics": {
+            "mean": {
+              "target": {
+                "mean": -2.672717010498047,
+                "std": 5.165245069594957,
+                "min": -11.131683349609375,
+                "median": -3.692138671875,
+                "max": 11.363037109375
+              },
+              "background": {
+                "mean": -2.6920908508300783,
+                "std": 5.211639855553463,
+                "min": -11.07720947265625,
+                "median": -3.4908905029296875,
+                "max": 11.503173828125
+              },
+              "target_minus_background_mean": 0.019373840332031378,
+              "target_to_background_ratio": 0.9928034225419778,
+              "standardized_effect": 0.003732133022689838
+            },
+            "std": {
+              "target": {
+                "mean": 7532.875337966692,
+                "std": 0.8576571362741254,
+                "min": 7530.238087648826,
+                "median": 7532.88846211183,
+                "max": 7535.467357265609
+              },
+              "background": {
+                "mean": 6673.992688836165,
+                "std": 0.8137798763924575,
+                "min": 6671.208755268727,
+                "median": 6673.999650397947,
+                "max": 6677.196732089503
+              },
+              "target_minus_background_mean": 858.8826491305272,
+              "target_to_background_ratio": 1.128690978425435,
+              "standardized_effect": 1026.849896560004
+            },
+            "rms": {
+              "target": {
+                "mean": 7532.8775830045915,
+                "std": 0.857649307320351,
+                "min": 7530.241985109714,
+                "median": 7532.889329020087,
+                "max": 7535.471746282768
+              },
+              "background": {
+                "mean": 6673.995266656154,
+                "std": 0.8136772436072207,
+                "min": 6671.215283012153,
+                "median": 6674.002858679687,
+                "max": 6677.1999855320755
+              },
+              "target_minus_background_mean": 858.8823163484376,
+              "target_to_background_ratio": 1.1286908788562506,
+              "standardized_effect": 1026.9157889107446
+            },
+            "mean_abs": {
+              "target": {
+                "mean": 6271.630963775635,
+                "std": 1.113202779972405,
+                "min": 6268.007415771484,
+                "median": 6271.6568603515625,
+                "max": 6275.8753662109375
+              },
+              "background": {
+                "mean": 5808.823529388428,
+                "std": 4.1857156142204435,
+                "min": 5800.717041015625,
+                "median": 5809.443283081055,
+                "max": 5816.693054199219
+              },
+              "target_minus_background_mean": 462.80743438720674,
+              "target_to_background_ratio": 1.0796731785783709,
+              "standardized_effect": 151.03868098147083
+            },
+            "peak_abs": {
+              "target": {
+                "mean": 19616.794,
+                "std": 143.7468175786859,
+                "min": 19261.0,
+                "median": 19618.5,
+                "max": 20285.0
+              },
+              "background": {
+                "mean": 14162.857,
+                "std": 104.17200464136226,
+                "min": 13897.0,
+                "median": 14171.0,
+                "max": 14657.0
+              },
+              "target_minus_background_mean": 5453.937000000002,
+              "target_to_background_ratio": 1.3850873450180285,
+              "standardized_effect": 43.425969134499525
+            }
+          }
+        },
+        "P1_odd_subframes": {
+          "subframes": 1000,
+          "metrics": {
+            "mean": {
+              "target": {
+                "mean": -2.7126653442382813,
+                "std": 5.1716947232077635,
+                "min": -11.140716552734375,
+                "median": -3.75732421875,
+                "max": 10.69403076171875
+              },
+              "background": {
+                "mean": -2.7684566955566408,
+                "std": 5.211473334091329,
+                "min": -12.04266357421875,
+                "median": -3.883880615234375,
+                "max": 11.250244140625
+              },
+              "target_minus_background_mean": 0.05579135131835944,
+              "target_to_background_ratio": 0.9798474899723357,
+              "standardized_effect": 0.010741045341838387
+            },
+            "std": {
+              "target": {
+                "mean": 7532.762009579709,
+                "std": 0.8387803137789132,
+                "min": 7530.172295938169,
+                "median": 7532.768388672915,
+                "max": 7535.174175349758
+              },
+              "background": {
+                "mean": 6673.988550621781,
+                "std": 0.858181353398,
+                "min": 6671.636755656366,
+                "median": 6673.978801763997,
+                "max": 6676.7143247441945
+              },
+              "target_minus_background_mean": 858.7734589579286,
+              "target_to_background_ratio": 1.128674697663052,
+              "standardized_effect": 1011.5583518818814
+            },
+            "rms": {
+              "target": {
+                "mean": 7532.764273363676,
+                "std": 0.8387104102802022,
+                "min": 7530.175534893175,
+                "median": 7532.77257822279,
+                "max": 7535.1748264314665
+              },
+              "background": {
+                "mean": 6673.99115954588,
+                "std": 0.8581468855313261,
+                "min": 6671.638465014522,
+                "median": 6673.981328800347,
+                "max": 6676.715255856587
+              },
+              "target_minus_background_mean": 858.773113817796,
+              "target_to_background_ratio": 1.1286745956487347,
+              "standardized_effect": 1011.6199150168504
+            },
+            "mean_abs": {
+              "target": {
+                "mean": 6271.545775268554,
+                "std": 1.0830915840901927,
+                "min": 6268.315856933594,
+                "median": 6271.5455322265625,
+                "max": 6275.0377197265625
+              },
+              "background": {
+                "mean": 5808.786963348389,
+                "std": 4.225517735282706,
+                "min": 5800.6943359375,
+                "median": 5809.5399169921875,
+                "max": 5816.917266845703
+              },
+              "target_minus_background_mean": 462.7588119201655,
+              "target_to_background_ratio": 1.0796653096145594,
+              "standardized_effect": 149.9529000450056
+            },
+            "peak_abs": {
+              "target": {
+                "mean": 19620.6,
+                "std": 145.49626112034633,
+                "min": 19228.0,
+                "median": 19619.0,
+                "max": 20153.0
+              },
+              "background": {
+                "mean": 14165.079,
+                "std": 107.10479335211846,
+                "min": 13893.0,
+                "median": 14172.5,
+                "max": 14590.0
+              },
+              "target_minus_background_mean": 5455.520999999999,
+              "target_to_background_ratio": 1.385138762727691,
+              "standardized_effect": 42.68299792598393
+            }
+          }
+        }
+      }
+    },
+    "session03": {
+      "session_id": "session03",
+      "target_sha256": "3b303cb7f4fd339c70abfb44cf493c329de567051481f21ba208731e4ad739fc",
+      "background_sha256": "5893803c417d7896e0002a3bd0b90248ef08120bee6aacb4313abc32103de5b1",
+      "analysis_scope": "Raw int16 profile-stratified statistics only; this does not decode physical range, Doppler, angle, or challenge identity.",
+      "profiles": {
+        "P0_even_subframes": {
+          "subframes": 1000,
+          "metrics": {
+            "mean": {
+              "target": {
+                "mean": -2.7058670043945314,
+                "std": 5.199438556635112,
+                "min": -11.5113525390625,
+                "median": -3.719818115234375,
+                "max": 11.567413330078125
+              },
+              "background": {
+                "mean": -2.6702286682128906,
+                "std": 5.180961459906869,
+                "min": -11.39178466796875,
+                "median": -3.56939697265625,
+                "max": 11.64959716796875
+              },
+              "target_minus_background_mean": -0.035638336181640806,
+              "target_to_background_ratio": 1.0133465484083402,
+              "standardized_effect": -0.006863021862351499
+            },
+            "std": {
+              "target": {
+                "mean": 7532.873296941813,
+                "std": 0.8100089782806063,
+                "min": 7530.390406414475,
+                "median": 7532.8580056061555,
+                "max": 7536.139562754469
+              },
+              "background": {
+                "mean": 6674.031132305324,
+                "std": 0.8423382994359271,
+                "min": 6671.103442772138,
+                "median": 6674.026884225123,
+                "max": 6677.162593827203
+              },
+              "target_minus_background_mean": 858.8421646364895,
+              "target_to_background_ratio": 1.1286841711719482,
+              "standardized_effect": 1038.8232397269016
+            },
+            "rms": {
+              "target": {
+                "mean": 7532.875577336647,
+                "std": 0.8100223356153807,
+                "min": 7530.390606029831,
+                "median": 7532.859542652948,
+                "max": 7536.140631396181
+              },
+              "background": {
+                "mean": 6674.033677420108,
+                "std": 0.8424129145638407,
+                "min": 6671.107578609299,
+                "median": 6674.029365323906,
+                "max": 6677.162931976418
+              },
+              "target_minus_background_mean": 858.8418999165397,
+              "target_to_background_ratio": 1.1286840824346172,
+              "standardized_effect": 1038.7668819390697
+            },
+            "mean_abs": {
+              "target": {
+                "mean": 6271.606312255859,
+                "std": 1.0302395095447383,
+                "min": 6268.056396484375,
+                "median": 6271.5748291015625,
+                "max": 6274.986175537109
+              },
+              "background": {
+                "mean": 5808.826702972412,
+                "std": 4.140104024483621,
+                "min": 5801.042510986328,
+                "median": 5809.425231933594,
+                "max": 5816.5220947265625
+              },
+              "target_minus_background_mean": 462.7796092834469,
+              "target_to_background_ratio": 1.0796683449080413,
+              "standardized_effect": 153.32540992076267
+            },
+            "peak_abs": {
+              "target": {
+                "mean": 19623.501,
+                "std": 141.21138763924105,
+                "min": 19301.0,
+                "median": 19624.0,
+                "max": 20021.0
+              },
+              "background": {
+                "mean": 14163.32,
+                "std": 107.04816486049633,
+                "min": 13864.0,
+                "median": 14178.0,
+                "max": 14446.0
+              },
+              "target_minus_background_mean": 5460.1810000000005,
+              "target_to_background_ratio": 1.3855156135708295,
+              "standardized_effect": 43.5552183441022
+            }
+          }
+        },
+        "P1_odd_subframes": {
+          "subframes": 1000,
+          "metrics": {
+            "mean": {
+              "target": {
+                "mean": -2.7261694946289063,
+                "std": 5.194806756763125,
+                "min": -11.3878173828125,
+                "median": -3.8146820068359375,
+                "max": 11.997222900390625
+              },
+              "background": {
+                "mean": -2.7478618469238283,
+                "std": 5.171529261982472,
+                "min": -11.547088623046875,
+                "median": -3.8426513671875,
+                "max": 11.42047119140625
+              },
+              "target_minus_background_mean": 0.021692352294921946,
+              "target_to_background_ratio": 0.9921057340203598,
+              "standardized_effect": 0.004183049576128612
+            },
+            "std": {
+              "target": {
+                "mean": 7532.7753786128615,
+                "std": 0.8105540278343583,
+                "min": 7530.045387962886,
+                "median": 7532.784435410587,
+                "max": 7535.702128608701
+              },
+              "background": {
+                "mean": 6674.009691938111,
+                "std": 0.8427439082440632,
+                "min": 6671.256055010674,
+                "median": 6674.014369646447,
+                "max": 6676.658301925757
+              },
+              "target_minus_background_mean": 858.7656866747502,
+              "target_to_background_ratio": 1.1286731254993678,
+              "standardized_effect": 1038.1353932674167
+            },
+            "rms": {
+              "target": {
+                "mean": 7532.777663158145,
+                "std": 0.8106028832988419,
+                "min": 7530.048709808093,
+                "median": 7532.787158963648,
+                "max": 7535.705778713996
+              },
+              "background": {
+                "mean": 6674.012261265829,
+                "std": 0.8427539101553685,
+                "min": 6671.26077661557,
+                "median": 6674.018637412207,
+                "max": 6676.659206245407
+              },
+              "target_minus_background_mean": 858.7654018923158,
+              "target_to_background_ratio": 1.128673033293085,
+              "standardized_effect": 1038.0985812253732
+            },
+            "mean_abs": {
+              "target": {
+                "mean": 6271.553552124024,
+                "std": 1.0639571381414539,
+                "min": 6268.116241455078,
+                "median": 6271.566513061523,
+                "max": 6274.895050048828
+              },
+              "background": {
+                "mean": 5808.848173553467,
+                "std": 4.24851574031752,
+                "min": 5800.187194824219,
+                "median": 5809.730728149414,
+                "max": 5816.5838623046875
+              },
+              "target_minus_background_mean": 462.7053785705566,
+              "target_to_background_ratio": 1.0796552715350975,
+              "standardized_effect": 149.33327264809475
+            },
+            "peak_abs": {
+              "target": {
+                "mean": 19624.116,
+                "std": 144.01431367749527,
+                "min": 19251.0,
+                "median": 19624.0,
+                "max": 20082.0
+              },
+              "background": {
+                "mean": 14166.928,
+                "std": 105.21110595369674,
+                "min": 13852.0,
+                "median": 14172.0,
+                "max": 14492.0
+              },
+              "target_minus_background_mean": 5457.188000000002,
+              "target_to_background_ratio": 1.3852061646674567,
+              "standardized_effect": 43.25021198631108
+            }
+          }
+        }
+      }
+    }
+  }
+}
