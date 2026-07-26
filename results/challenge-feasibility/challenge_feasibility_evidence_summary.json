@@ -1,0 +1,61 @@
+{
+  "report_type": "challenge_feasibility_evidence_summary",
+  "publication_eligibility": false,
+  "evidence_status": {
+    "binary_file_distinction": {
+      "status": "PASS",
+      "target_hashes_distinct": true,
+      "background_hashes_distinct": true
+    },
+    "raw_signal_repeatability": {
+      "status": "PASS",
+      "threshold_percent": 1.0,
+      "all_selected_metrics_within_threshold": true
+    },
+    "range_fft_repeatability": {
+      "status": "PASS",
+      "P0": {
+        "dominant_bin": 3,
+        "dominant_bin_match": true,
+        "total_power_ratio_drift_percent": 0.0010217206212079005
+      },
+      "P1": {
+        "dominant_bin": 4,
+        "dominant_bin_match": true,
+        "total_power_ratio_drift_percent": 0.0006447200502394716
+      }
+    },
+    "uncalibrated_range_bin_conversion": {
+      "status": "PASS",
+      "range_bin_spacing_m": 0.043571956298046874,
+      "P0_dominant_bin_location_m": 0.1307158688941406,
+      "P1_dominant_bin_location_m": 0.1742878251921875
+    },
+    "session03_provenance": {
+      "status": "BLOCKED",
+      "timestamp_file_status": "not_found",
+      "timestamp_validation": "blocked",
+      "publication_eligibility": false
+    }
+  },
+  "defensible_claims": [
+    "The retained Session 02 and Session 03 binary files are distinct by SHA-256.",
+    "Selected raw-signal target/background metrics are repeatable under the predefined one-percent drift rule.",
+    "The dominant target-minus-background FFT bin is reproduced across the retained binary sets for both profiles.",
+    "The reported metric locations are uncalibrated beat-frequency range-bin locations."
+  ],
+  "claims_not_supported": [
+    "Complete independent Session 03 acquisition provenance.",
+    "Verified Session 03 packet-loss or timestamp continuity.",
+    "Independently surveyed physical target distance.",
+    "Challenge authenticity or security against an active adversary.",
+    "Publication eligibility of Session 03."
+  ],
+  "source_files": {
+    "binary_repeatability": "results/challenge-feasibility/cross_session_binary_repeatability.json",
+    "profile_repeatability": "results/challenge-feasibility/profile_repeatability_summary.json",
+    "range_fft": "results/challenge-feasibility/profile_range_fft_analysis.json",
+    "range_conversion": "results/challenge-feasibility/physical_range_conversion.json",
+    "session03_status": "data/measured/challenge-feasibility/session03/validation_status.json"
+  }
+}
