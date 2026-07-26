@@ -1,0 +1,79 @@
+{
+  "report_type": "cross_session_binary_repeatability",
+  "publication_eligibility": false,
+  "limitations": [
+    "Session 03 does not have a distinct matching timestamp artifact.",
+    "This report compares retained binary contents only.",
+    "It does not establish complete Session 03 acquisition provenance."
+  ],
+  "sessions": {
+    "session02": {
+      "directory": "data/measured/challenge-feasibility/session02",
+      "target": {
+        "size_bytes": 131072000,
+        "size_valid": true,
+        "sha256": "5cb232274ab27aafac4b3b348a61310cacbb30babd19b672d32aa3a95ea8d534"
+      },
+      "background": {
+        "size_bytes": 131072000,
+        "size_valid": true,
+        "sha256": "037a9d8cf302b5f1a9c65901c5fdea6a49cd8201106f3e48049682873c293824"
+      }
+    },
+    "session03": {
+      "directory": "data/measured/challenge-feasibility/session03",
+      "target": {
+        "size_bytes": 131072000,
+        "size_valid": true,
+        "sha256": "3b303cb7f4fd339c70abfb44cf493c329de567051481f21ba208731e4ad739fc"
+      },
+      "background": {
+        "size_bytes": 131072000,
+        "size_valid": true,
+        "sha256": "5893803c417d7896e0002a3bd0b90248ef08120bee6aacb4313abc32103de5b1"
+      }
+    }
+  },
+  "independence_checks": {
+    "target_hashes_distinct": true,
+    "background_hashes_distinct": true
+  },
+  "comparisons": {
+    "target_session02_vs_session03": {
+      "first_file": "data/measured/challenge-feasibility/session02/profile_switch_target_full.bin",
+      "second_file": "data/measured/challenge-feasibility/session03/profile_switch_target_full.bin",
+      "sample_count": 65536000,
+      "identical_sample_fraction": 0.001702117919921875,
+      "mean_absolute_difference": 189.348259475708,
+      "root_mean_squared_difference": 238.8214473690218,
+      "pearson_correlation": 0.9994974247611582
+    },
+    "background_session02_vs_session03": {
+      "first_file": "data/measured/challenge-feasibility/session02/profile_switch_bg_full.bin",
+      "second_file": "data/measured/challenge-feasibility/session03/profile_switch_bg_full.bin",
+      "sample_count": 65536000,
+      "identical_sample_fraction": 0.0017242889404296875,
+      "mean_absolute_difference": 185.6093693847656,
+      "root_mean_squared_difference": 233.35033686667305,
+      "pearson_correlation": 0.9993887576094018
+    },
+    "session02_target_vs_background": {
+      "first_file": "data/measured/challenge-feasibility/session02/profile_switch_target_full.bin",
+      "second_file": "data/measured/challenge-feasibility/session02/profile_switch_bg_full.bin",
+      "sample_count": 65536000,
+      "identical_sample_fraction": 6.60247802734375e-05,
+      "mean_absolute_difference": 3130.2402108306883,
+      "root_mean_squared_difference": 3499.2217427513424,
+      "pearson_correlation": 0.8855574437931794
+    },
+    "session03_target_vs_background": {
+      "first_file": "data/measured/challenge-feasibility/session03/profile_switch_target_full.bin",
+      "second_file": "data/measured/challenge-feasibility/session03/profile_switch_bg_full.bin",
+      "sample_count": 65536000,
+      "identical_sample_fraction": 6.54449462890625e-05,
+      "mean_absolute_difference": 3130.2375008239746,
+      "root_mean_squared_difference": 3499.1874781509337,
+      "pearson_correlation": 0.8855600139105132
+    }
+  }
+}
