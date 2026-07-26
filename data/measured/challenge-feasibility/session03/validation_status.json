@@ -1,0 +1,11 @@
+{
+  "session_id": "session03",
+  "status": "incomplete",
+  "binary_structural_validation": "pass",
+  "binary_independence_from_session02": "pass",
+  "timestamp_validation": "blocked",
+  "timestamp_file_status": "not_found",
+  "runtime_log_status": "present",
+  "publication_eligibility": false,
+  "reason": "No distinct per-subframe timestamp artifact corresponding to the Session 03 binaries was found."
+}
