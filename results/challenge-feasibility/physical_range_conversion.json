@@ -1,0 +1,73 @@
+{
+  "report_type": "physical_range_conversion",
+  "source_range_fft_report": "results/challenge-feasibility/profile_range_fft_analysis.json",
+  "source_config": "data/measured/challenge-feasibility/session02/profile_P0_P1_advframe.cfg",
+  "publication_eligibility": false,
+  "formulae": {
+    "sweep_bandwidth": "B = slope * (N_adc / sample_rate)",
+    "range_resolution": "delta_R = c / (2B)",
+    "range_bin_spacing": "delta_R_bin = c * sample_rate / (2 * slope * N_fft)",
+    "dominant_range": "R_bin = bin_index * delta_R_bin"
+  },
+  "profile_parameters": {
+    "0": {
+      "start_frequency_ghz": 60.0,
+      "frequency_slope_mhz_per_us": 70.0,
+      "adc_samples": 256,
+      "sample_rate_ksps": 5209.0,
+      "frequency_slope_hz_per_s": 70000000000000.0,
+      "sample_rate_hz": 5209000.0,
+      "adc_sampling_time_us": 49.1457093492033,
+      "sweep_bandwidth_hz": 3440199654.444231,
+      "range_resolution_m": 0.043571956298046874,
+      "range_bin_spacing_m": 0.043571956298046874,
+      "max_reported_positive_fft_range_m": 5.533638449851953
+    },
+    "1": {
+      "start_frequency_ghz": 60.1,
+      "frequency_slope_mhz_per_us": 70.0,
+      "adc_samples": 256,
+      "sample_rate_ksps": 5209.0,
+      "frequency_slope_hz_per_s": 70000000000000.0,
+      "sample_rate_hz": 5209000.0,
+      "adc_sampling_time_us": 49.1457093492033,
+      "sweep_bandwidth_hz": 3440199654.444231,
+      "range_resolution_m": 0.043571956298046874,
+      "range_bin_spacing_m": 0.043571956298046874,
+      "max_reported_positive_fft_range_m": 5.533638449851953
+    }
+  },
+  "dominant_bin_conversion": {
+    "P0_even_subframes": {
+      "session02_total_power_ratio": 1.0002899577091984,
+      "session03_total_power_ratio": 1.000279737592639,
+      "total_power_ratio_drift_percent": 0.0010217206212079005,
+      "session02_dominant_difference_bin": 3,
+      "session03_dominant_difference_bin": 3,
+      "dominant_bin_match": true,
+      "range_bin_spacing_m": 0.043571956298046874,
+      "session02_dominant_difference_range_m": 0.1307158688941406,
+      "session03_dominant_difference_range_m": 0.1307158688941406,
+      "dominant_range_match": true
+    },
+    "P1_odd_subframes": {
+      "session02_total_power_ratio": 1.0001267095301072,
+      "session03_total_power_ratio": 1.0001331575683172,
+      "total_power_ratio_drift_percent": 0.0006447200502394716,
+      "session02_dominant_difference_bin": 4,
+      "session03_dominant_difference_bin": 4,
+      "dominant_bin_match": true,
+      "range_bin_spacing_m": 0.043571956298046874,
+      "session02_dominant_difference_range_m": 0.1742878251921875,
+      "session03_dominant_difference_range_m": 0.1742878251921875,
+      "dominant_range_match": true
+    }
+  },
+  "limitations": [
+    "Session 03 lacks a distinct matching timestamp artifact.",
+    "The conversion assumes N_fft equals the 256 ADC samples used by the source FFT analysis.",
+    "Reported values are beat-frequency range-bin locations, not independently surveyed target distances.",
+    "No calibration correction for antenna, cable, ADC, or fixed hardware delay is applied.",
+    "Publication eligibility remains false until acquisition provenance and ground truth are complete."
+  ]
+}
