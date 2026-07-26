@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "experiment_id": "MEASURED_SESSION_20260726_02",
-  "artifact_provenance": "measured_after_capture_only",
+  "artifact_provenance": "measured",
   "capture_timestamp_utc": null,
   "hardware": {
     "sensor_model": "TI IWR6843ISK-ODS",
@@ -43,20 +43,20 @@
     "subframes_p1": 1000,
     "bytes_per_subframe": 65536,
     "expected_bytes": 131072000,
-    "received_bytes": null,
-    "packet_loss": null,
-    "continuous_lvds_stream": null
+    "received_bytes": 131072000,
+    "packet_loss": 0,
+    "continuous_lvds_stream": true
   },
   "artifacts": {
     "target_binary": {
       "filename": "profile_switch_target_full.bin",
-      "size_bytes": null,
-      "sha256": null
+      "size_bytes": 131072000,
+      "sha256": "5cb232274ab27aafac4b3b348a61310cacbb30babd19b672d32aa3a95ea8d534"
     },
     "background_binary": {
       "filename": "profile_switch_bg_full.bin",
-      "size_bytes": null,
-      "sha256": null
+      "size_bytes": 131072000,
+      "sha256": "037a9d8cf302b5f1a9c65901c5fdea6a49cd8201106f3e48049682873c293824"
     },
     "runtime_log": "runtime_control_capture.log",
     "timestamps": "per_subframe_timestamps.json"
