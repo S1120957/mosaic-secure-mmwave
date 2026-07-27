@@ -25,3 +25,6 @@ data/synthetic/challenge-feasibility/session02-test/*.bin
 # Large measured radar captures — retained locally
 data/measured/challenge-feasibility/session02/*.bin
 data/measured/challenge-feasibility/session03/*.bin
+
+# Generated emulated datasets remain local
+data/emulated/*.bin
